@@ -71,7 +71,7 @@ class LeaveApplicationController extends Controller
         if ($request->has('file')) {
             $file = new Attachment();
             $file_path = Storage::disk('public')->put('files', $request->file);
-            $file->path = $file_path;
+            $file->path = '/storage/' . $file_path;
             $file->user_id = Auth::id();
             $file->leave_id = $application->id;
             $file->save();

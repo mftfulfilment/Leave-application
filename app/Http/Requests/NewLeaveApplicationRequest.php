@@ -26,7 +26,7 @@ class NewLeaveApplicationRequest extends FormRequest
         return [
             'start_date'    => ['required', 'date'],
             'end_date'      => ['nullable', 'date' ,'after:start_date'],
-            'reason'        => ['required', 'string', 'max:255'],
+            'take_charge'        => ['required', 'string', 'max:255'],
             'leave_type'    => ['required', 'integer', 'max:255'],
             'information'   => ['nullable', 'string', 'max:255'],
         ];
@@ -37,7 +37,7 @@ class NewLeaveApplicationRequest extends FormRequest
         return [
             'start_date'  => 'Start Date',
             'end_date'    => 'End Date',
-            'reason'      => 'Reason of Leave',
+            'take_charge'      => 'person to take charge',
             'leave_type'  => 'type of Leave',
             'information' => 'Information',
         ];

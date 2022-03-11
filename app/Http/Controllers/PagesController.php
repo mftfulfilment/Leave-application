@@ -13,7 +13,7 @@ class PagesController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function redirectToHomeView()
     {
         return redirect()->route('homeView');
@@ -42,7 +42,7 @@ class PagesController extends Controller
         ->select('status', DB::raw('count(status) as total'))
         ->groupBy('status')
         ->pluck('total','status');
-        
+
         return view('pages.home', $data);
     }
 
@@ -54,12 +54,13 @@ class PagesController extends Controller
 
     public function actionView()
     {
-        $data['applications'] = LeaveApplication::where('status', 'pending')
+        $data['applications'] = LeaveApplication::where('status', 'Waiting final Approval')
         ->join('users', 'users.id', '=', 'leave_applications.applier_user_id')
         ->join('leave_types', 'leave_types.id', '=', 'leave_applications.leave_type_id')
         ->select(
-            'leave_applications.id as id', 
-            'leave_applications.reason',
+            'leave_applications.id as id',
+            'leave_applications.take_charge',
+            'leave_applications.department',
             'leave_applications.information',
             'users.name as applier_name',
             'leave_applications.start_date',

@@ -25,19 +25,20 @@ class RolesAndPermissionsSeeder extends Seeder
         ];
         foreach($permissions as $permission) Permission::create(['name' => $permission]);
         // =======================================================================
-        
+
         $admin       = Role::create(['name' => 'admin']);
-        $payroll     = Role::create(['name' => 'payroll']);
-        $lineManager = Role::create(['name' => 'line manager']);
-        $executive   = Role::create(['name' => 'executive']);
+        $hr     = Role::create(['name' => 'Hr']);
+        $department_head = Role::create(['name' => 'department head']);
+        $staff   = Role::create(['name' => 'staff']);
         // =======================================================================
 
-        $executive_permissions = [
+        $staff_permissions = [
             'application.create',
         ];
-        
+
         $admin->syncPermissions($permissions);
-        $lineManager->syncPermissions($permissions);
-        $executive->syncPermissions($executive_permissions);
+        $hr->syncPermissions($permissions);
+        $department_head->syncPermissions($permissions);
+        $staff->syncPermissions($staff_permissions);
     }
 }

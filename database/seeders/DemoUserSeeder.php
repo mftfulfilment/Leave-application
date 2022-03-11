@@ -16,30 +16,61 @@ class DemoUserSeeder extends Seeder
     public function run()
     {
         $admin = User::create([
-            'name'     => 'LeaveMS Admin',
-            'email'    => 'admin@mail.com',
-            'password' => Hash::make('12345'),
+            'name'     => 'Admin',
+            'email'    => 'support@mftfulfillmentcentre.com',
+            'password' => Hash::make('password'),
         ]);
         $admin->assignRole('admin');
         $payroll = User::create([
-            'name'     => 'LeaveMS Payroll',
-            'email'    => 'payroll@mail.com',
-            'password' => Hash::make('12345'),
+            'name'     => 'Hr',
+            'email'    => 'hrm@mftfulfillmentcentre.com',
+            'password' => Hash::make('password'),
         ]);
-        $payroll->assignRole('payroll');
+        $payroll->assignRole('hr');
 
-        $lineManager = User::create([
-            'name'     => 'LeaveMS Line Manager',
-            'email'    => 'line@mail.com',
-            'password' => Hash::make('12345'),
+        $operation = User::create([
+            'name'     => 'department head',
+            'email'    => 'operationske@mftfulfillmentcentre.com',
+            'password' => Hash::make('password'),
         ]);
-        $lineManager->assignRole('line manager');
+        $operation->assignRole('department head');
+
+
+        $call_centre = User::create([
+            'name'     => 'department head',
+            'email'    => 'customersupport@mftfulfillmentcentre.com',
+            'password' => Hash::make('password'),
+        ]);
+        $call_centre->assignRole('department head');
+
+        $warehouse = User::create([
+            'name'     => 'department head',
+            'email'    => 'warehouseke@mftfulfillmentcentre.com',
+            'password' => Hash::make('password'),
+        ]);
+        $warehouse->assignRole('department head');
+
+
+        $business = User::create([
+            'name'     => 'department head',
+            'email'    => 'business@mftfulfillmentcentre.com',
+            'password' => Hash::make('password'),
+        ]);
+        $business->assignRole('department head');
+
+        $finance = User::create([
+            'name'     => 'department head',
+            'email'    => 'financeoffice@mftfulfillmentcentre.com',
+            'password' => Hash::make('password'),
+        ]);
+        $finance->assignRole('department head');
+
 
         $user = User::create([
-            'name'     => 'Executive User',
+            'name'     => 'Staff',
             'email'    => 'user@mail.com',
-            'password' => Hash::make('12345'),
+            'password' => Hash::make('password'),
         ]);
-        $user->assignRole('executive');
+        $user->assignRole('staff');
     }
 }

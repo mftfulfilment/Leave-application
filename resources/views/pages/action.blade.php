@@ -10,6 +10,7 @@
             @forelse ($applications as $application)
                 <x-preview.application :application='$application' />
                 <x-modal.application :application='$application' />
+
             @empty
                 <p>No Data Available</p>
             @endforelse

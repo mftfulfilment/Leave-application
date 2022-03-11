@@ -15,20 +15,28 @@ class LeaveTypeSeeder extends Seeder
     public function run()
     {
         LeaveType::create([
-            'type' => 'annual',
-            'days' => 5,
+            'type' => 'Annual Leave',
+            'days' => 21,
         ]);
         LeaveType::create([
-            'type' => 'personal',
-            'days' => 5,
+            'type' => 'Sick Leave',
+            'days' => 7,
         ]);
         LeaveType::create([
-            'type' => 'without pay',
-            'days' => 5,
+            'type' => 'Maternity Leave',
+            'days' => 90,
         ]);
         LeaveType::create([
-            'type' => 'long service',
-            'days' => 5,
+            'type' => 'Paternity Leave',
+            'days' => 14,
+        ]);
+        LeaveType::create([
+            'type' => 'Compassionate Leave',
+            'days' => 14,
+        ]);
+        LeaveType::create([
+            'type' => 'Pre-adoption Leave',
+            'days' => 30,
         ]);
     }
 }

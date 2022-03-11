@@ -25,5 +25,7 @@ Route::group(['middleware' => ['can:application.create']], function () {
 });
 Route::group(['middleware' => ['can:application.authorize']], function () {
     Route::get('/action', [PagesController::class, 'actionView'])->name('actionView');
+    Route::get('/department/{id}/{status}', [LeaveApplicationController::class, 'department'])->name('department');
+    Route::get('/hrm/{id}/{status}', [LeaveApplicationController::class, 'hrm'])->name('hrm');
     Route::post('/action/{application}', [LeaveApplicationController::class, 'update'])->name('update');
 });

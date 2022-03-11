@@ -8,8 +8,9 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="shortcut icon" href="https://mftfulfillmentcentre.com/images/Final%20Images/favicon.png">
 
-    <title>MFT</title>
+    <title>MFT FULFILLMENT CENTRE</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"

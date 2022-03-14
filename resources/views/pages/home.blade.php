@@ -18,10 +18,13 @@
                         @if($cn)<span class="badge badge-primary badge-pill">{{ $cn }}</span> @endif
                     </a>
                     @can('application.create')
-                    <a href="{{ Route('applyView') }}" class="btn btn-secondary btn-block">Leave Application</a>
+                    <a href="{{ Route('applyView') }}" class="btn btn-secondary btn-block">Apply</a>
                     @endcan
                     @can('application.authorize')
                     <a href="{{ Route('actionView') }}" class="btn btn-secondary btn-block">Actions</a>
+                    @endcan
+                    @can('application.authorize')
+                    <a href="{{ Route('leave') }}" class="btn btn-secondary btn-block">Leave Applications</a>
                     @endcan
                 </div>
             </div>

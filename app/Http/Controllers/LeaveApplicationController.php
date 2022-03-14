@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Notifications\ApplicationApprovedNotification;
 use App\Notifications\ApplicationRejectedNotification;
 use App\Notifications\NewApplicationNotification;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
@@ -23,6 +24,20 @@ class LeaveApplicationController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function index()
+    {
+        $data = LeaveApplication::with('applier', 'leave_type')->paginate(10);
+        // return $data;
+        $data->transform(function ($item) {
+            $days = Carbon::parse($item->start_date)->diffInDaysFiltered(function (Carbon $date) {
+                return !$date->isWeekend();
+            }, Carbon::parse($item->end_date));
+            $item->duration = $days+1;
+            return $item;
+        });
+        return view('pages.leave', $data);
     }
 
     // public function store(Request $request)

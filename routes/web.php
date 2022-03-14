@@ -28,4 +28,7 @@ Route::group(['middleware' => ['can:application.authorize']], function () {
     Route::get('/department/{id}/{status}', [LeaveApplicationController::class, 'department'])->name('department');
     Route::get('/hrm/{id}/{status}', [LeaveApplicationController::class, 'hrm'])->name('hrm');
     Route::post('/action/{application}', [LeaveApplicationController::class, 'update'])->name('update');
+
+    Route::get('/leave', [LeaveApplicationController::class, 'index'])->name('leave');
+
 });

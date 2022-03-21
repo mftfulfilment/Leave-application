@@ -52,7 +52,7 @@
                             charge</label>
                         <div class="col-md-9">
                             <input type="text" class="form-control @error('take_charge') is-invalid @enderror"
-                                id="take_charge" name="take_charge" placeholder="i.e. Due to sickness"
+                                id="take_charge" name="take_charge" placeholder=""
                                 value="{{ old('take_charge') }}">
                             @error('take_charge')
                                 <span class="invalid-feedback" role="alert">
@@ -111,7 +111,7 @@
 
                     <!-- ./Information -->
                     <div class="form-group row">
-                        <label for="information" class="col-md-3 col-form-label text-md-right text-md">Information</label>
+                        <label for="information" class="col-md-3 col-form-label text-md-right text-md">Information(optional)</label>
                         <div class="col-md-9">
                             <textarea class="form-control" id="information" name="information" rows="5"
                                 placeholder="Justify your reason"></textarea>

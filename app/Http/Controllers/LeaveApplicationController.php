@@ -140,7 +140,7 @@ class LeaveApplicationController extends Controller
     public function department($id, $status)
     {
         $application = LeaveApplication::find($id);
-        if (Auth::user()->hasRole('department head') && $application->approval_level < 1) {
+        if ((Auth::user()->hasRole('department head') || Auth::user()->hasRole('admin') )&& $application->approval_level < 1) {
             if ($status == 'rejected') {
                 return redirect('update');
                 // $this->update(new Request($status), $application);

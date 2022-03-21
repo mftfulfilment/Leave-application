@@ -93,7 +93,7 @@
                                 <option value="" disabled hidden selected>Select</option>
                                 <option value="1">Business Development</option>
                                 <option value="2">Operations</option>
-                                <option value="3">Customer support</option>
+                                <option value="3">Client Relationship</option>
                                 <option value="4">Warehouse</option>
                                 <option value="5">Finance</option>
                                 <option value="6">IT</option>

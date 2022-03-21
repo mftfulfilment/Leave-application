@@ -75,7 +75,7 @@ class LeaveApplicationController extends Controller
         } elseif ($request['department'] == 2) {
             $email = 'operationske@mftfulfillmentcentre.com';
         } elseif ($request['department'] == 3) {
-            $email = 'customersupport@mftfulfillmentcentre.com';
+            $email = 'vincent.aluoch@speedballcourier.com';
         } elseif ($request['department'] == 4) {
             $email = 'warehouseke@mftfulfillmentcentre.com';
         } elseif ($request['department'] == 5) {

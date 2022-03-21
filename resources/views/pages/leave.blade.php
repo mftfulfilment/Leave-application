@@ -30,7 +30,10 @@
                         </td>
                         <td> <span class="badge badge-pill badge-success">{{ $item['status'] }}</span></td>
                         <td>
+    @if ($item['attachment'] )
+
                             <a href="{{ $item['attachment']['path'] }}" target="_blank">Attachment</a>
+                            @endif
                         </td>
                     </tr>
                 @endforeach

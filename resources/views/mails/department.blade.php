@@ -1,8 +1,5 @@
 @component('mail::message')
-# Introduction
-
-
-
+# 
 
 <ul class="list-group">
     <li class="list-group-item">Name <b style="float: right"> {{ $user->name }}</b></li>

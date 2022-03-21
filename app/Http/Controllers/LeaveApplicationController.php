@@ -188,4 +188,9 @@ class LeaveApplicationController extends Controller
         Notification::send($users, new NewApplicationNotification($application));
         return 'Leave approved';
     }
+
+    public function admin()
+    {
+        
+    }
 }

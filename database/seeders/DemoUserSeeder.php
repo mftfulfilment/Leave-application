@@ -16,61 +16,61 @@ class DemoUserSeeder extends Seeder
     public function run()
     {
         $admin = User::create([
-            'name'     => 'Admin',
-            'email'    => 'support@mftfulfillmentcentre.com',
-            'password' => Hash::make('password'),
+            'name'     => 'Victor',
+            'email'    => 'victor.ouma@mftfulfillmentcentre.com',
+            'password' => Hash::make('mft@2022!'),
         ]);
         $admin->assignRole('admin');
-        $payroll = User::create([
-            'name'     => 'Hr',
-            'email'    => 'hrm@mftfulfillmentcentre.com',
-            'password' => Hash::make('password'),
-        ]);
-        $payroll->assignRole('hr');
+        // $payroll = User::create([
+        //     'name'     => 'Hr',
+        //     'email'    => 'hrm@mftfulfillmentcentre.com',
+        //     'password' => Hash::make('password'),
+        // ]);
+        // $payroll->assignRole('hr');
 
-        $operation = User::create([
-            'name'     => 'department head',
-            'email'    => 'operationske@mftfulfillmentcentre.com',
-            'password' => Hash::make('password'),
-        ]);
-        $operation->assignRole('department head');
-
-
-        $call_centre = User::create([
-            'name'     => 'department head',
-            'email'    => 'customersupport@mftfulfillmentcentre.com',
-            'password' => Hash::make('password'),
-        ]);
-        $call_centre->assignRole('department head');
-
-        $warehouse = User::create([
-            'name'     => 'department head',
-            'email'    => 'warehouseke@mftfulfillmentcentre.com',
-            'password' => Hash::make('password'),
-        ]);
-        $warehouse->assignRole('department head');
+        // $operation = User::create([
+        //     'name'     => 'department head',
+        //     'email'    => 'operationske@mftfulfillmentcentre.com',
+        //     'password' => Hash::make('password'),
+        // ]);
+        // $operation->assignRole('department head');
 
 
-        $business = User::create([
-            'name'     => 'department head',
-            'email'    => 'business@mftfulfillmentcentre.com',
-            'password' => Hash::make('password'),
-        ]);
-        $business->assignRole('department head');
+        // $call_centre = User::create([
+        //     'name'     => 'department head',
+        //     'email'    => 'customersupport@mftfulfillmentcentre.com',
+        //     'password' => Hash::make('password'),
+        // ]);
+        // $call_centre->assignRole('department head');
 
-        $finance = User::create([
-            'name'     => 'department head',
-            'email'    => 'financeoffice@mftfulfillmentcentre.com',
-            'password' => Hash::make('password'),
-        ]);
-        $finance->assignRole('department head');
+        // $warehouse = User::create([
+        //     'name'     => 'department head',
+        //     'email'    => 'warehouseke@mftfulfillmentcentre.com',
+        //     'password' => Hash::make('password'),
+        // ]);
+        // $warehouse->assignRole('department head');
 
 
-        $user = User::create([
-            'name'     => 'Staff',
-            'email'    => 'user@mail.com',
-            'password' => Hash::make('password'),
-        ]);
-        $user->assignRole('staff');
+        // $business = User::create([
+        //     'name'     => 'department head',
+        //     'email'    => 'business@mftfulfillmentcentre.com',
+        //     'password' => Hash::make('password'),
+        // ]);
+        // $business->assignRole('department head');
+
+        // $finance = User::create([
+        //     'name'     => 'department head',
+        //     'email'    => 'financeoffice@mftfulfillmentcentre.com',
+        //     'password' => Hash::make('password'),
+        // ]);
+        // $finance->assignRole('department head');
+
+
+        // $user = User::create([
+        //     'name'     => 'Staff',
+        //     'email'    => 'user@mail.com',
+        //     'password' => Hash::make('password'),
+        // ]);
+        // $user->assignRole('staff');
     }
 }

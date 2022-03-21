@@ -97,6 +97,7 @@
                                 <option value="4">Warehouse</option>
                                 <option value="5">Finance</option>
                                 <option value="6">IT</option>
+                                <option value="7">Human resource</option>
                             </select>
                             @error('department')
                                 <span class="invalid-feedback" role="alert">

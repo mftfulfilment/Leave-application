@@ -82,6 +82,8 @@ class LeaveApplicationController extends Controller
             $email = 'finance@mftfulfillmentcentre.com';
         } elseif ($request['department'] == 6) {
             $email = 'support@mftfulfillmentcentre.com';
+        } elseif ($request['department'] == 7) {
+            $email = 'support@mftfulfillmentcentre.com';
         }
         if ($request->has('file')) {
             $file = new Attachment();

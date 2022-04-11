@@ -10,7 +10,7 @@
                 - {{ $application->end_date }}
             @endif
         </div>
-        <div class="col-5">
+        <div class="col-3">
             {{ $application->take_charge }}
         </div>
 
@@ -20,5 +20,8 @@
                 <a href="{{ $application->attachment->path }}" target="_blank">File</a>
             </div>
         @endif
+        <div class="col-2">
+            <span class="badge badge-pill badge-success">{{ $application->status }}</span>
+        </div>
     </div>
 </button>

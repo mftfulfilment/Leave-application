@@ -126,7 +126,8 @@ class LeaveApplicationController extends Controller
         $application->save();
 
         $applier = User::findOrFail($application->applier_user_id);
-        if ($request->has('approved') && Auth::user()->hasRole('admin')) {
+        if ($request->has('approved')) {
+            // if ($request->has('approved') && Auth::user()->hasRole('admin')) {
             $users = User::role(['Hr'])->get();
             Notification::send($users, new ApplicationApprovedNotification($application));
             Notification::send($applier, new ApplicationApprovedNotification($application));

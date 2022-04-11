@@ -20,8 +20,6 @@
                     @elseif ($application->status == 'Waiting final Approval' && auth()->user()->hasRole('Admin'))
                         <x-preview.application :application='$application' />
                         <x-modal.application :application='$application' />
-                    @else
-                        <p>No Data Available</p>
                     @endif
                 @empty
                     <p>No Data Available</p>

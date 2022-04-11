@@ -126,7 +126,7 @@ class LeaveApplicationController extends Controller
         $application->save();
 
         $applier = User::findOrFail($application->applier_user_id);
-        if ($request->has('approved')) {
+        if ($request->has('approved') && Auth::user()->hasRole('admin')) {
             $users = User::role(['Hr'])->get();
             Notification::send($users, new ApplicationApprovedNotification($application));
             Notification::send($applier, new ApplicationApprovedNotification($application));
@@ -142,7 +142,7 @@ class LeaveApplicationController extends Controller
         $application = LeaveApplication::find($id);
         if ((Auth::user()->hasRole('department head') || Auth::user()->hasRole('admin') )&& $application->approval_level < 1) {
             if ($status == 'rejected') {
-                return redirect('update');
+                return redirect('action');
                 // $this->update(new Request($status), $application);
                 // return 'Leave rejected';
             }
@@ -191,6 +191,6 @@ class LeaveApplicationController extends Controller
 
     public function admin()
     {
-        
+
     }
 }

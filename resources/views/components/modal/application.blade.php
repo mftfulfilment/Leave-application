@@ -26,7 +26,8 @@
                 <div class="row">
                     <div class="col-3 text-right">Period</div>
                     <div class="col-9">{{ $application->start_date }} @if ($application->end_date)
-                        - {{ $application->end_date }} @endif
+                            - {{ $application->end_date }}
+                        @endif
                     </div>
                 </div>
                 <div class="row">
@@ -57,13 +58,13 @@
                     <div class="form-group row">
                         <label for="remarks" class="col-3 col-form-label text-md-right text-md">Remarks</label>
                         <div class="col-9">
-                            <textarea class="form-control" id="remarks" name="remarks" rows="5"
-                                placeholder="Write a note..."></textarea>
+                            <textarea class="form-control" id="remarks" name="remarks" rows="5" placeholder="Write a note..."></textarea>
                         </div>
                     </div>
                     <!-- ./Remarks -->
-
-                    <button type="submit" class="btn btn-primary float-right ml-2" name="approved">Approve</button>
+                    @if (auth()->user()->hasRole('Admin'))
+                        <button type="submit" class="btn btn-primary float-right ml-2" name="approved">Approve</button>
+                    @endif
                     <button type="submit" class="btn btn-danger float-right" name="rejected">Reject</button>
                 </form>
             </div>

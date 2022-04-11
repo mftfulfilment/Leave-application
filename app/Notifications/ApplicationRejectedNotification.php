@@ -27,14 +27,14 @@ class ApplicationRejectedNotification extends Notification
     {
         return (new MailMessage)
                     ->subject('Leave Application of '.$this->application->applier->name.' is Rejected')
-                    ->line('Leave application of '.$this->application->applier->name.' for '.$this->application->duration.' days started from '.$this->application->start_date.' was Rejected by authority.')
+                    ->line('Leave application of '.$this->application->applier->name.' for '.$this->application->duration.' days started from '.$this->application->start_date.' was Rejected.')
                     ->line('We are sorry for that.');
     }
 
     public function toArray($notifiable)
     {
         return [
-            'data'=>'Leave application of '.$this->application->applier->name.' for '.$this->application->duration.' days started from '.$this->application->start_date.' was Rejected by authority.',
+            'data'=>'Leave application of '.$this->application->applier->name.' for '.$this->application->duration.' days started from '.$this->application->start_date.' was Rejected.',
         ];
     }
 }

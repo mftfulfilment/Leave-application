@@ -54,8 +54,7 @@ class PagesController extends Controller
 
     public function actionView()
     {
-        $data['applications'] = LeaveApplication::where('status', 'Waiting final Approval')
-        ->join('users', 'users.id', '=', 'leave_applications.applier_user_id')
+        $data['applications'] = LeaveApplication::join('users', 'users.id', '=', 'leave_applications.applier_user_id')
         ->join('leave_types', 'leave_types.id', '=', 'leave_applications.leave_type_id')
         ->select(
             'leave_applications.id as id',

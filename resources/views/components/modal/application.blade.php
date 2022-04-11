@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <!-- ./Remarks -->
-                    @if (auth()->user()->hasRole('Admin'))
+                    @if (auth()->user()->hasRole('Admin') || auth()->user()->hasRole('Admin'))
                         <button type="submit" class="btn btn-primary float-right ml-2" name="approved">Approve</button>
                     @endif
                     <button type="submit" class="btn btn-danger float-right" name="rejected">Reject</button>

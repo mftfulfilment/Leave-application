@@ -15,12 +15,12 @@ class DemoUserSeeder extends Seeder
      */
     public function run()
     {
-        $admin = User::create([
-            'name'     => 'Victor',
-            'email'    => 'victor.ouma@mftfulfillmentcentre.com',
-            'password' => Hash::make('mft@2022!'),
-        ]);
-        $admin->assignRole('admin');
+        // $admin = User::create([
+        //     'name'     => 'Victor',
+        //     'email'    => 'victor.ouma@mftfulfillmentcentre.com',
+        //     'password' => Hash::make('mft@2022!'),
+        // ]);
+        // $admin->assignRole('admin');
         // $payroll = User::create([
         //     'name'     => 'Hr',
         //     'email'    => 'hrm@mftfulfillmentcentre.com',
@@ -58,6 +58,7 @@ class DemoUserSeeder extends Seeder
         // ]);
         // $business->assignRole('department head');
 
+
         // $finance = User::create([
         //     'name'     => 'department head',
         //     'email'    => 'financeoffice@mftfulfillmentcentre.com',
@@ -72,5 +73,14 @@ class DemoUserSeeder extends Seeder
         //     'password' => Hash::make('password'),
         // ]);
         // $user->assignRole('staff');
+
+
+
+        $komfy = User::create([
+            'name'     => 'department head',
+            'email'    => 'csm@komfy-shop.com',
+            'password' => Hash::make('komfy@2022'),
+        ]);
+        $komfy->assignRole('department head');
     }
 }

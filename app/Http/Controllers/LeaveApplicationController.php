@@ -77,13 +77,16 @@ class LeaveApplicationController extends Controller
         } elseif ($request['department'] == 3) {
             $email = 'vincent.aluoch@speedballcourier.com';
         } elseif ($request['department'] == 4) {
-            $email = 'warehouseke@mftfulfillmentcentre.com';
+            $email = 'vincent.aluoch@speedballcourier.com';
+            // $email = 'warehouseke@mftfulfillmentcentre.com';
         } elseif ($request['department'] == 5) {
             $email = 'finance@mftfulfillmentcentre.com';
         } elseif ($request['department'] == 6) {
             $email = 'support@mftfulfillmentcentre.com';
         } elseif ($request['department'] == 7) {
             $email = 'support@mftfulfillmentcentre.com';
+        } elseif ($request['department'] == 8) {
+            $email = 'csm@komfy-shop.com';
         }
         if ($request->has('file')) {
             $file = new Attachment();

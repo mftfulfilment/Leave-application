@@ -180,7 +180,7 @@ class LeaveApplicationController extends Controller
         }
 
         if ($status == 'rejected') {
-            return redirect('update');
+                return redirect('action');
             // $this->update(new Request($status), $application);
             // return 'Leave rejected';
         }

@@ -16,12 +16,12 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($data as $item)
+            @foreach ($data as $key => $item)
             <tr>
-                <th scope="row">1</th>
+                <th scope="row"> {{$key+1}} </th>
                 <td>{{ $item['applier']['name'] }}</td>
                 <td>{{ $item['department'] }}</td>
-                {{-- <td>{{ $item['duration'] }}</td> --}}
+                <td>{{ $item['duration'] }}</td>
                 <td>{{ $item['leave_type']['type'] }}</td>
                 <td>
                     {{ $item['start_date'] }} @if ($item['end_date'])

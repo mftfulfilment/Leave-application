@@ -28,7 +28,7 @@ class LeaveApplicationController extends Controller
 
     public function index()
     {
-        $data = LeaveApplication::with('applier', 'leave_type')->paginate(1);
+        $data = LeaveApplication::with('applier', 'leave_type')->paginate(15);
         // return view('pages.leave')->with(['data' => $data]);
         // return $data;
         $data->transform(function ($item) {

@@ -21,7 +21,7 @@
             </div>
         @endif
         <div class="col-2">
-            <span class="badge badge-pill badge-success">{{ $application->status }}</span>
+            <span class="badge text-bg-success">{{ $application->status }}</span>
         </div>
     </div>
 </button>

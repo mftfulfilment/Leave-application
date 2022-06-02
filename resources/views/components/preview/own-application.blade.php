@@ -5,7 +5,7 @@
         @endif
     </span>
     @if ($application->status == 'approved')
-    <span class="badge badge-pill badge-success float-right">{{ $application->status }}</span>
+    <span class="badge text-bg-success float-right">{{ $application->status }}</span>
     @elseif($application->status == 'rejected')
     <span class="badge badge-pill badge-danger float-right">{{ $application->status }}</span>
     @else

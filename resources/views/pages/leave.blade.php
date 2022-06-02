@@ -21,7 +21,7 @@
                 <th scope="row">1</th>
                 <td>{{ $item['applier']['name'] }}</td>
                 <td>{{ $item['department'] }}</td>
-                <td>{{ $item['duration'] }}</td>
+                {{-- <td>{{ $item['duration'] }}</td> --}}
                 <td>{{ $item['leave_type']['type'] }}</td>
                 <td>
                     {{ $item['start_date'] }} @if ($item['end_date'])
@@ -38,6 +38,11 @@
             </tr>
             @endforeach
         </tbody>
+
+        <tfoot>
+            <th>
+        {{ $data->links() }}</th>
+    </tfoot>
     </table>
 </main>
 @endsection
@@ -47,5 +52,8 @@
     .display-5 {
         font-size: 1.5rem !important;
     }
+    img, svg {
+        width: 10px !important;
+}
 </style>
 @endpush

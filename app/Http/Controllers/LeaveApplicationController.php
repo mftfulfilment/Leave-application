@@ -28,7 +28,8 @@ class LeaveApplicationController extends Controller
 
     public function index()
     {
-        $data = LeaveApplication::with('applier', 'leave_type')->paginate(10);
+        $data = LeaveApplication::with('applier', 'leave_type')->paginate(1);
+        // return view('pages.leave')->with(['data' => $data]);
         // return $data;
         $data->transform(function ($item) {
             $days = Carbon::parse($item->start_date)->diffInDaysFiltered(function (Carbon $date) {
@@ -37,7 +38,9 @@ class LeaveApplicationController extends Controller
             $item->duration = $days+1;
             return $item;
         });
-        return view('pages.leave', $data);
+        // return collect($data);
+        return view('pages.leave')->with(['data' => $data]);
+        // return view('pages.leave', collect($data));
     }
 
     // public function store(Request $request)
